@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">NKR to DKR</string>
+    <string name="hint_text"> </string>
+
+    <string name="lbl_change_qty">Кол-во</string>
+    <string name="lbl_transform">Преобразовать</string>
+    <string name="lbl_result">Результат</string>
+
+    <string name="error_not_found_state">Не найдено подходящее состояние</string>
+    
+    <string-array name="qty_array">
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+</resources>

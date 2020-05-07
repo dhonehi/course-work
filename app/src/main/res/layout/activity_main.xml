@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/tableSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Строки" />
+
+            <Spinner
+                android:id="@+id/spRowCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/qty_array" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Столбцы" />
+
+            <Spinner
+                android:id="@+id/spColumnCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/qty_array" />
+
+        </LinearLayout>
+
+        <TableLayout
+            android:id="@+id/tlTable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tableSize"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp">
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    style="@style/TableCell"
+                    android:autofillHints="@string/hint_text"
+                    android:focusable="false"
+                    android:text=" " />
+
+                <EditText
+                    style="@style/TableCell"
+                    android:autofillHints="@string/hint_text"
+                    android:text="a" />
+
+                <EditText
+                    style="@style/TableCell"
+                    android:autofillHints="@string/hint_text"
+                    android:text="b" />
+
+                <EditText
+                    style="@style/TableCell"
+                    android:autofillHints="@string/hint_text"
+                    android:focusable="false"
+                    android:text="F" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    style="@style/TableCell"
+                    android:autofillHints="@string/hint_text"
+                    android:text="q0" />
+
+                <EditText
+                    style="@style/TableCell"
+                    android:autofillHints="@string/hint_text" />
+
+                <EditText
+                    style="@style/TableCell"
+                    android:autofillHints="@string/hint_text" />
+
+                <EditText
+                    style="@style/TableCell"
+                    android:autofillHints="@string/hint_text" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    style="@style/TableCell"
+                    android:autofillHints="@string/hint_text"
+                    android:text="q1" />
+
+                <EditText
+                    style="@style/TableCell"
+                    android:autofillHints="@string/hint_text" />
+
+                <EditText
+                    style="@style/TableCell"
+                    android:autofillHints="@string/hint_text" />
+
+                <EditText
+                    style="@style/TableCell"
+                    android:autofillHints="@string/hint_text" />
+
+            </TableRow>
+
+        </TableLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnTransform"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tlTable"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textSize="10sp"
+            android:fontFamily="@font/sourcesanspro_semibold"
+            android:text="@string/lbl_transform">
+
+        </com.google.android.material.button.MaterialButton>
+
+        <LinearLayout
+            android:id="@+id/llResult"
+            android:layout_below="@id/btnTransform"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_result"
+                android:textSize="20dp"
+                android:fontFamily="@font/sourcesanspro_bold"
+                android:textStyle="bold"
+                android:textColor="#EA222020"
+                android:layout_gravity="center_horizontal"/>
+
+            <include
+                layout="@layout/result_table"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</ScrollView>
